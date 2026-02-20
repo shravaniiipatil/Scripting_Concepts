@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Details</title>
+</head>
+<body>
+<h2>Student Information</h2>
+<script>
+class Student {
+constructor(rollNo, name, marks) {
+this.rollNo = rollNo;
+this.name = name;
+this.marks = marks;
+}
+display() {
+document.write("<h3>Student Details</h3>");
+document.write("Roll Number: " + this.rollNo + "<br>");
+document.write("Name: " + this.name + "<br>");
+document.write("Marks: " + this.marks + "<br>");
+}
+}
+let roll = prompt("Enter Roll Number:");
+let name = prompt("Enter Student Name:");
+let marks = prompt("Enter Marks:");
+let stud = new Student(roll, name, marks);
+stud.display();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Area of Rectangle</title>
+</head>
+<body>
+<h2>Calculate Area of Rectangle</h2>
+<script>
+class Rectangle {
+constructor(length, breadth) {
+this.length = length;
+this.breadth = breadth;
+}
+calculateArea() {
+return this.length * this.breadth;
+}
+}
+let l = parseFloat(prompt("Enter length of rectangle:"));
+let b = parseFloat(prompt("Enter breadth of rectangle:"));
+let rect = new Rectangle(l, b);
+let area = rect.calculateArea();
+document.write("Length: " + l + "<br>");
+document.write("Breadth: " + b + "<br>");
+document.write("<b>Area of Rectangle: </b>" + area);
+</script>
+</body>
+</html>

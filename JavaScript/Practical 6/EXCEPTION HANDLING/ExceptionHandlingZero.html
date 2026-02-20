@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exception Handling</title>
+
+<script>
+function divideNumbers() {
+
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    try {
+        if (num2 == 0) {
+            throw "Cannot divide by zero!";
+        }
+
+        var result = num1 / num2;
+        document.getElementById("output").innerHTML = "Result: " + result;
+    }
+    catch (error) {
+        document.getElementById("output").innerHTML = "Error: " + error;
+    }
+    finally {
+        console.log("Division operation attempted.");
+    }
+}
+</script>
+</head>
+
+<body>
+
+<h2>Division Program (Exception Handling)</h2>
+
+Enter First Number:
+<input type="number" id="num1"><br><br>
+
+Enter Second Number:
+<input type="number" id="num2"><br><br>
+
+<button onclick="divideNumbers()">Divide</button>
+
+<p id="output"></p>
+
+</body>
+</html>

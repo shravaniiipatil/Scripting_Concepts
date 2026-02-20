@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arithmetic Operations</title>
+</head>
+<body>
+<script>
+let a = parseFloat(prompt("Enter first number:"));
+let b = parseFloat(prompt("Enter second number:"));
+let choice = prompt("Choose operation:\n1. Add\n2. Subtract\n3. Multiply\n4. Divide");
+let result;
+switch (choice) {
+case "1":
+result = a + b;
+document.write("Addition = " + result);
+break;
+case "2":
+result = a - b;
+document.write("Subtraction = " + result);
+break;
+case "3":
+result = a * b;
+document.write("Multiplication = " + result);
+break;
+case "4":
+if (b !== 0) {
+result = a / b;
+document.write("Division = " + result);
+} else {
+document.write("Division by zero is not allowed");
+}
+break;
+default:
+document.write("Invalid choice");
+}
+</script>
+</body>
+</html>

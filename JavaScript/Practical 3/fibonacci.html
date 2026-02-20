@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function fibonacci(n) {
+let a = 0, b = 1;
+while (a <= n) {
+document.write(a + " ");
+let c = a + b;
+a = b;
+b = c;
+}
+}
+let num = parseInt(prompt("Enter a number:"));
+fibonacci(num);
+</script>
+</body>
+</html>

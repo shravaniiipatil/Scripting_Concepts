@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Background Color</title>
+</head>
+<body onclick="changeColor()">
+<h2>Click anywhere on the page to change background color</h2>
+<script>
+function changeColor() {
+let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+document.body.style.backgroundColor = color;
+}
+</script>
+</body>
+</html>

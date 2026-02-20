@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+<script>
+function validateForm() {
+    var number = document.getElementById("number").value;
+    if (number == "" || isNaN(number)) {
+        alert("Enter valid number (digits only)");
+        return false;
+    }
+    var email = document.getElementById("email").value;
+    var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email == "" || !email.match(emailPattern)) {
+        alert("Enter valid email");
+        return false;
+    }
+    var password = document.getElementById("password").value;
+    if (password == "" || password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return false;
+    }
+    var image = document.getElementById("image").value;
+    var allowed = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    if (image == "" || !image.match(allowed)) {
+        alert("Select valid image file (jpg, jpeg, png, gif)");
+        return false;
+    }
+    alert("Form Submitted Successfully!");
+    return true;
+}
+</script>
+</head>
+<body>
+<h2>Validation Form</h2>
+<form onsubmit="return validateForm()">
+Number:
+<input type="text" id="number"><br><br>
+Email:
+<input type="text" id="email"><br><br>
+Password:
+<input type="password" id="password"><br><br>
+Upload Image:
+<input type="file" id="image"><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
